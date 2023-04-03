@@ -22,7 +22,7 @@ const verificaLogin = async (req, res, next) => {
         }
         console.log(rows[0])
 
-        const { senha, ...usuario } = rows[0];
+        const { senha, ...usuario } = usuarioEncontrado;
 
 
         req.usuario = usuario;
