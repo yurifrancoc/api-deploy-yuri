@@ -24,13 +24,4 @@ const knex = require('knex')({
 });
 
 
-
-// module.exports = {
-//     knex
-// }
-
-// const query = (text, param) => {
-//     return pool.query(text, param);
-// }
-
 module.exports = knex
