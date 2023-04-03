@@ -28,7 +28,7 @@ const verificaLogin = async (req, res, next) => {
 
         next();
     } catch (error) {
-        return res.status(400).json({ mensagem: "não" });
+        return res.status(400).json({ mensagem: error.message });
     }
 }
 
