@@ -34,7 +34,7 @@ const obterProduto = async (req, res) => {
             return res.status(404).json('Produto não encontrado');
         }
 
-        return res.status(200).json(rows[0]);
+        return res.status(200).json(produto);
     } catch (error) {
         return res.status(400).json(error.message);
     }
