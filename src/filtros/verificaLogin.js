@@ -21,13 +21,14 @@ const verificaLogin = async (req, res, next) => {
             return res.status(404).json('Usuario não encontrado');
         }
 
+
         const { senha, ...usuario } = rows[0];
 
         req.usuario = usuario;
 
         next();
     } catch (error) {
-        return res.status(400).json(error.message);
+        return res.status(400).json({ mensagem: error.message });
     }
 }
 
