@@ -20,9 +20,10 @@ const verificaLogin = async (req, res, next) => {
         if (!usuarioEncontrado) {
             return res.status(404).json('Usuario não encontrado');
         }
+        console.log(rows[0])
 
+        const { senha, ...usuario } = rows[0];
 
-        const { senha, ...usuario } = usuario.rows[0];
 
         req.usuario = usuario;
 
