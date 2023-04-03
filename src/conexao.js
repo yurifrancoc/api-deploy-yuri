@@ -33,6 +33,4 @@ const knex = require('knex')({
 //     return pool.query(text, param);
 // }
 
-module.exports = {
-    knex
-}
+module.exports = knex
