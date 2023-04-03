@@ -20,7 +20,6 @@ const verificaLogin = async (req, res, next) => {
         if (!usuarioEncontrado) {
             return res.status(404).json('Usuario não encontrado');
         }
-        console.log(rows[0])
 
         const { senha, ...usuario } = usuarioEncontrado;
 
@@ -29,7 +28,7 @@ const verificaLogin = async (req, res, next) => {
 
         next();
     } catch (error) {
-        return res.status(400).json({ mensagem: error.message });
+        return res.status(400).json({ mensagem: "não" });
     }
 }
 
